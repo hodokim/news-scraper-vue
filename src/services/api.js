@@ -31,6 +31,10 @@ export default {
   login(credentials) {
     return apiClient.post('/users/login', credentials);
   },
+  // [추가된 함수] 현재 로그인된 사용자 정보 조회
+  getMyInfo() {
+    return apiClient.get('/users/me');
+  },
 
   // 뉴스 및 키워드 관련 API
   getNews() {
