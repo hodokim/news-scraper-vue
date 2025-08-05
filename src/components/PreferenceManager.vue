@@ -71,7 +71,7 @@ onMounted(fetchMySites);
     </form>
 
     <div v-if="preferredSites.length === 0" class="empty-sites-message">
-      <p>💡 선호하는 사이트를 추가하여 맞춤 뉴스를 스크랩해 보세요.</p>
+      <p>💡 선호하는 사이트를 추가해보세요!</p>
     </div>
     <ul v-else>
       <li v-for="site in preferredSites" :key="site">
