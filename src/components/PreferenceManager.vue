@@ -70,10 +70,10 @@ onMounted(fetchMySites);
       <button type="submit">추가</button>
     </form>
 
-    <ul>
-      <li v-if="preferredSites.length === 0">
-        <span>선호하는 사이트가 없습니다.</span>
-      </li>
+    <div v-if="preferredSites.length === 0" class="empty-sites-message">
+      <p>💡 선호하는 사이트를 추가하여 맞춤 뉴스를 스크랩해 보세요.</p>
+    </div>
+    <ul v-else>
       <li v-for="site in preferredSites" :key="site">
         <span>{{ site }}</span>
         <button @click="handleDeletePreference(site)" class="delete-btn">삭제</button>
@@ -129,6 +129,21 @@ li {
 li:last-child {
   border-bottom: none;
 }
+
+.empty-sites-message {
+  padding: 1.5rem;
+  text-align: center;
+  color: #555;
+  background-color: #f8f9fa;
+  border: 1px dashed #ced4da;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+.empty-sites-message p {
+  margin: 0;
+  font-weight: 500;
+}
+
 .delete-btn {
   background-color: #dc3545;
   color: white;
