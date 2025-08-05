@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useAuthStore } from '@/stores/auth';
 
 const apiClient = axios.create({
-  baseURL: 'https://https://news-scraper-bsiv.onrender.com/api', // Spring Boot 서버 주소
+  baseURL: 'https://news-scraper-bsiv.onrender.com/api', // Spring Boot 서버 주소
   headers: {
     'Content-Type': 'application/json',
   },
